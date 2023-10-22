@@ -132,6 +132,15 @@ export default {
           en_summary: 'Lyan Portal is Administration Platform For Lyan Compony Employres'
         },
         {
+          en_title: 'How Much Left',
+          logoWidth: 100,
+          logoHeight: 100,
+          logo: 'hml.png',
+          fa_title: 'گروه کوبل',
+          link: 'http://howmuchleft.ir/',
+          en_summary: 'How Much Left is a Fun and One-Day Project Which Wants to Remind You to Seize the Moment'
+        },
+        {
           en_title: 'Coach Crew',
           logoWidth: 240,
           logoHeight: 50,
