@@ -103,6 +103,15 @@ export default {
             'Maan is a leading private pharmaceutical company founded in 2002. Maan core activities encompass pharmaceutical registration, importation, and sales & marketing of multinational brands'
         },
         {
+          en_title: 'MagicBook',
+          logoWidth: 120,
+          logoHeight: 70,
+          logo: 'magicbook.png',
+          fa_title: 'مجیک‌ بوک',
+          link: 'https://magic-book.ir/',
+          en_summary: 'MagicBook is an Online E-Book Store Which Helps Users To Finish Their Reads in a Creative Way'
+        },
+        {
           en_title: 'Cobel Group Website',
           logoWidth: 160,
           logoHeight: 50,
