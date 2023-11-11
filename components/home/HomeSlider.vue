@@ -10,7 +10,7 @@
       height="100%"
       min-height="500"
     >
-      <div class="d-flex flex-column align-end justify-space-between" :style="!isMobile && `height: 90%`">
+      <div class="d-flex flex-column align-center justify-center" :style="!isMobile && `height: 90%`">
         <h1
           :class="[
             'white--text text--darken-2 font-weight-regular',
@@ -22,27 +22,6 @@
           Shaw Bahrampour:<br />
           Riding the Data Wave with Retro Vibes - A Front-End Developer's Paradise
         </h1>
-        <v-sheet
-          v-if="!isMobile"
-          class="rounded d-flex flex-column align-center mt-4"
-          color="transparent"
-          width="100%"
-          height="100%"
-          max-height="250"
-          style="border: solid 2px grey !important"
-        >
-          <iframe
-            title="Spotify Embed: Recommendation Playlist "
-            src="https://open.spotify.com/embed/playlist/1UNUQqWRrpTgigGsXA7Fiy?utm_source=generator&theme=0"
-            width="100%"
-            height="180"
-            frameBorder="0"
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-            loading="lazy"
-            class="rounded"
-          />
-          <span class="white--text f-24" style="font-family: IBM Plex Mono">In Praise of the Palm Tree🌴</span>
-        </v-sheet>
       </div>
     </v-sheet>
     <v-sheet
