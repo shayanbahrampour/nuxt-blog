@@ -4,12 +4,12 @@
       <template v-for="(item, n) in items">
         <v-col :key="n" cols="6">
           <v-card :class="['py-10', n % 2 === 1 ? 'ps-10' : 'pe-10']" elevation="0" color="transparent" outline tile>
-            <h4 :class="['f-30 text--darken-3 font-weight-regular white--text']" style="font-family: IBM Plex Mono">
+            <h4 :class="['f-30 text--darken-3 font-weight-regular white--text']" style="font-family: Poppins">
               {{ item.en_title }}
             </h4>
             <p
               :class="['f-18 mt-4 mb-0 text--darken-3 mb-auto white--text']"
-              style="height: 120px !important; font-family: Gabarito"
+              style="height: 120px !important; font-family: Poppins; line-height: 1.4"
             >
               {{ item.en_summary }}
             </p>
@@ -23,7 +23,7 @@
                 height="40"
                 outlined
                 min-width="160"
-                style="font-family: Gabarito"
+                style="font-family: Poppins"
               >
                 Check It Out
               </v-btn>

@@ -14,13 +14,13 @@
         <h1
           :class="[
             'white--text text--darken-2 font-weight-regular',
-            isMobile ? 'f-40' : 'f-40',
+            isMobile ? 'f-40' : 'f-45',
             isRTL && isMobile && 'text-center'
           ]"
-          style="font-family: IBM Plex Mono; line-height: 1.4"
+          style="font-family: Poppins; line-height: 1.4; font-weight: 600"
         >
           Shaw Bahrampour:<br />
-          Riding the Data Wave with Retro Vibes - A Front-End Developer's Paradise
+          Riding the Data Wave with Retro Vibes🌴 - A Front-End Developer's Paradise
         </h1>
       </div>
     </v-sheet>
