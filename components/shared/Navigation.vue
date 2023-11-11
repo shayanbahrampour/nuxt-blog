@@ -25,11 +25,13 @@
             v-for="(item, index) in items"
             :key="index"
             :ripple="false"
-            :to="item.path"
+            :to="item.path !== 'blog' && item.path"
             :class="['bg-transparent grey--text button-appbar mx-4 px-4']"
             active-class="active-text"
             depressed
             exact
+            :href="item.path === 'blog' && 'https://shawbahrampour.digitalpress.blog/'"
+            :target="item.path === 'blog' && '_blank'"
             min-height="50"
             width="150"
             tile
@@ -68,8 +70,10 @@
           v-for="(item, index) in !flag.expandMenu ? items : expanded"
           :key="index"
           class="text-center white--text py-4 f-18"
-          :to="item.path"
+          :to="item.path !== 'blog' && item.path"
           color="transparent"
+          :href="item.path === 'blog' && 'https://shawbahrampour.digitalpress.blog/'"
+          :target="item.path === 'blog' && '_blank'"
           exact
           flat
           link
@@ -116,7 +120,8 @@ export default {
       return [
         { title: 'menu.home', path: '/' },
         { title: 'Projects', path: '/works' },
-        { title: 'Say Hello', path: '/contact' }
+        { title: 'Say Hello', path: '/contact' },
+        { title: 'Blog', path: 'blog' }
       ];
     },
     expanded() {
