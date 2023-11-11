@@ -3,11 +3,11 @@
     class="d-flex white--text text-center flex-column w-full justify-center align-center"
     :height="isMobile ? 'calc(100vh - 130px)' : `calc(100vh - ${screenHeight < 760 ? 80 : 120}px)`"
     color="transparent"
-    style="font-family: IBM Plex Mono; line-height: 1.4"
+    style="font-family: Poppins; line-height: 1.4"
   >
     <h1>
       I wasn't in the Mood While Designing This Page.<br />
-      Just Click Here:
+      Just Click Here 👋:
     </h1>
     <v-btn
       :class="['rounded d-flex justify-center white--text px-4 mt-6 font-weight-bold', !isMobile ? 'f-20' : 'f-14']"
@@ -16,11 +16,11 @@
       height="50"
       @click="openEmailClient"
     >
-      Magic Button (It Opens Your Mail App)
+      Mail App
     </v-btn>
 
-    <div :class="['d-flex flex-column mt-16', !isMobile ? 'text-center' : 'w-full text-start']">
-      <v-btn target="_blank" href="https://gitlab.com/shawbahrampour" class="grey--text d-flex justify-start" text
+    <div :class="['d-flex mt-16', !isMobile ? 'text-center' : 'w-full text-start flex-column']">
+      <v-btn target="_blank" href="https://gitlab.com/shawbahrampour" class="grey--text mt-2 d-flex justify-start" text
         ><v-icon class="mr-2" size="24" color="grey">mdi-gitlab</v-icon>Gitlab</v-btn
       >
       <v-btn

@@ -39,7 +39,7 @@
             style="border: solid 2px grey; border-radius: 14px"
           >
             <v-divider />
-            <span :class="['text-none', isRTL ? 'font-weight-regular f-16' : 'f-16']" style="font-family: Gabarito">
+            <span :class="['text-none', isRTL ? 'font-weight-regular f-14' : 'f-14']" style="font-family: Poppins">
               {{ $t(item.title) }}
             </span>
           </v-btn>
@@ -78,7 +78,7 @@
           flat
           link
           tile
-          style="font-family: Gabarito"
+          style="font-family: Poppins"
         >
           {{ $t(item.title) }}
         </v-card>
