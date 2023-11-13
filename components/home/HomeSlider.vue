@@ -22,6 +22,17 @@
           Shaw Bahrampour:<br />
           Riding the Data Wave with Retro Vibes🌴 - A Front-End Developer's Paradise
         </h1>
+        <div v-if="!flag.loading && item" class="w-full mt-16 d-flex flex-column align-start">
+          <span class="white--text f-20">Lates Blog Post:</span>
+          <v-btn
+            text
+            :class="['white--text text-center post-title pa-0', isMobile && 'text-wrap text-start mt-4']"
+            style="font-family: Poppins"
+            target="_blank"
+            :href="item.url"
+            >{{ item.title }}</v-btn
+          >
+        </div>
       </div>
     </v-sheet>
     <v-sheet
@@ -48,10 +59,10 @@ export default {
   data() {
     return {
       dialog: false,
+      item: null,
       screenHeight: 1080,
       flag: {
-        showFullscreen: false,
-        video: false
+        loading: false
       }
     };
   },
@@ -66,22 +77,20 @@ export default {
     calculateHeight() {
       this.screenHeight = window.innerHeight;
     }
+  },
+  async fetch() {
+    this.flag.loading = true;
+    const { posts } = await this.$store.dispatch('news/getPosts');
+    this.item = posts[0];
+    console.log(this.item);
+    this.flag.loading = false;
   }
 };
 </script>
 
 <style lang="scss">
-.home-slider {
-  video {
-    object-fit: cover;
-  }
-
-  .vjs-fullscreen-control {
-    cursor: default !important;
-    margin: 0 !important;
-    opacity: 0 !important;
-    visibility: hidden;
-    z-index: -1;
-  }
+.post-title:hover {
+  color: grey !important;
+  cursor: pointer;
 }
 </style>

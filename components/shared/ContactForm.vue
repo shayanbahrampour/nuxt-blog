@@ -1,6 +1,6 @@
 <template>
   <v-sheet
-    class="d-flex white--text text-center flex-column w-full justify-center align-center"
+    :class="['d-flex white--text text-center flex-column w-full justify-center align-center', isMobile && 'px-6']"
     :height="isMobile ? 'calc(100vh - 130px)' : `calc(100vh - ${screenHeight < 760 ? 80 : 120}px)`"
     color="transparent"
     style="font-family: Poppins; line-height: 1.4"
