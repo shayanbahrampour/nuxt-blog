@@ -1,5 +1,6 @@
 <template>
   <v-sheet
+    id="maanproject"
     height="100vh"
     :class="[
       'position-relative mx-auto home-slider overflow-hidden d-flex justify-center align-center',
@@ -7,7 +8,7 @@
     ]"
     color="transparent"
     style="position: fixed"
-    ><div class="box d-flex flex-column align-center" style="font-family: Poppins; line-height: 1.4; font-weight: 600">
+    ><div class="maan d-flex flex-column align-center" style="font-family: Poppins">
       <v-img src="/images/timeline/logo-maan.png" max-width="80" height="90" />
 
       <h1
@@ -16,10 +17,11 @@
           isMobile ? 'f-40 text-center' : 'f-30 text-center',
           isRTL && isMobile && 'text-center'
         ]"
+        style="line-height: 1.4; font-weight: 600 !important"
       >
         MAAN Patients, Physicians, Admin
       </h1>
-      <span class="white--text f-20 text-center" :style="`${!isMobile && 'width: 50%'}`"
+      <span class="white--text f-20 text-center" :style="`${!isMobile && 'width: 50%'}; line-height: 1.6`"
         >Maan is a leading private pharmaceutical company founded in 2002. Maan core activities encompass pharmaceutical
         registration, importation, and sales & marketing of multinational brands</span
       >
@@ -96,15 +98,15 @@ export default {
     gsap.ticker.lagSmoothing(0);
 
     gsap.defaults({ ease: 'power3' });
-    gsap.set('.box', { y: -1000 });
+    gsap.set('.maan', { x: 1000 });
 
-    ScrollTrigger.batch('.box', {
-      onEnter: (batch) => gsap.to(batch, { opacity: 1, y: 0, stagger: { each: 0.15, grid: [1, 3] }, overwrite: true }),
-      onLeave: (batch) => gsap.set(batch, { opacity: 0, y: -1000, overwrite: true }),
-      onEnterBack: (batch) => gsap.to(batch, { opacity: 1, y: 0, stagger: 0.15, overwrite: true }),
-      onLeaveBack: (batch) => gsap.set(batch, { opacity: 0, y: 1000, overwrite: true })
+    ScrollTrigger.batch('.maan', {
+      onEnter: (batch) => gsap.to(batch, { opacity: 1, x: 0, stagger: { each: 0.15, grid: [1, 3] }, overwrite: true }),
+      onLeave: (batch) => gsap.set(batch, { opacity: 0, x: 1000, overwrite: true }),
+      onEnterBack: (batch) => gsap.to(batch, { opacity: 1, x: 0, stagger: 0.15, overwrite: true }),
+      onLeaveBack: (batch) => gsap.set(batch, { opacity: 0, x: -1000, overwrite: true })
     });
-    ScrollTrigger.addEventListener('refreshInit', () => gsap.set('.box', { y: 0 }));
+    ScrollTrigger.addEventListener('refreshInit', () => gsap.set('.maan', { y: 0 }));
 
     ScrollTrigger.create({
       start: 0,

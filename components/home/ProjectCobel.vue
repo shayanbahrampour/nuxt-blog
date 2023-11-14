@@ -7,10 +7,7 @@
     ]"
     color="transparent"
     style="position: fixed"
-    ><div
-      class="cobel d-flex flex-column align-center"
-      style="font-family: Poppins; line-height: 1.4; font-weight: 600"
-    >
+    ><div class="cobel d-flex flex-column align-center" style="font-family: Poppins">
       <v-img src="/images/timeline/cobelgroup.png" max-width="160" height="50" />
 
       <h1
@@ -19,10 +16,11 @@
           isMobile ? 'f-40' : 'f-30',
           isRTL && isMobile && 'text-center'
         ]"
+        style="line-height: 1.4; font-weight: 600 !important"
       >
         Cobel Group Website & Admin
       </h1>
-      <span class="white--text f-20 text-center" :style="`${!isMobile && 'width: 50%'}`"
+      <span class="white--text f-20 text-center" :style="`${!isMobile && 'width: 50%'}; line-height: 1.6`"
         >Cobel Group® is a private pharmaceutical company with over 3000 employees and 100 national brands, encompassing
         a complete and integrated pharmaceutical cycle within itself. The group strives to be a catalyst and creator of
         new knowledge and solutions, with a focus on human health.

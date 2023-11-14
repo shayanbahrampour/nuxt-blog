@@ -118,7 +118,7 @@ export default {
           'Pixelify+Sans': true,
           Gabarito: true,
           'IBM+Plex+Mono': true,
-          Poppins: true,
+          Poppins: [300, 600],
           Lato: [100, 300],
           Raleway: {
             wght: [100, 400],

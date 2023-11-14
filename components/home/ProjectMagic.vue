@@ -4,10 +4,7 @@
     class="position-relative mx-auto home-slider overflow-hidden d-flex justify-center align-center"
     color="transparent"
     style="position: fixed"
-    ><div
-      class="magic d-flex flex-column align-center"
-      style="font-family: Poppins; line-height: 1.4; font-weight: 600"
-    >
+    ><div class="magic d-flex flex-column align-center" style="font-family: Poppins">
       <v-img src="/images/timeline/magicbook.png" max-width="120" height="70" />
 
       <h1
@@ -16,10 +13,11 @@
           isMobile ? 'f-40' : 'f-30 text-center',
           isRTL && isMobile && 'text-center'
         ]"
+        style="line-height: 1.4; font-weight: 600 !important"
       >
         MagicBook
       </h1>
-      <span class="white--text f-20 text-center" style="width: 50%"
+      <span class="white--text f-20 text-center" style="width: 50%; line-height: 1.6"
         >MagicBook is an Online E-Book Store Which Helps Users To Finish Their Reads in a Creative Way</span
       >
       <div class="d-flex">

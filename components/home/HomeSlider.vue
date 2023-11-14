@@ -28,7 +28,8 @@
             isMobile ? 'f-20' : 'f-24 text-start',
             isRTL && isMobile && 'text-center'
           ]"
-          style="font-family: Poppins; line-height: 1.4; font-weight: 600"
+          style="font-family: Poppins; line-height: 1.4; font-weight: 600; cursor: pointer"
+          @click="$vuetify.goTo('#intro')"
         >
           Scroll Down 👇
         </h1>
