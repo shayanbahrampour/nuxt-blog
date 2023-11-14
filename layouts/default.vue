@@ -1,8 +1,6 @@
 <template>
   <v-app>
     <v-main style="background: linear-gradient(to left, #232d3f, black) !important">
-      <Navigation />
-
       <v-fade-transition hide-on-leave leave-absolute>
         <Nuxt />
       </v-fade-transition>
