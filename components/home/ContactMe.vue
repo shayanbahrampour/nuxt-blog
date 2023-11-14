@@ -1,13 +1,13 @@
 <template>
   <v-sheet
     :class="['d-flex white--text text-center flex-column w-full justify-center align-center', isMobile && 'px-6']"
-    :height="isMobile ? 'calc(100vh - 130px)' : `calc(100vh - ${screenHeight < 760 ? 80 : 120}px)`"
+    height="100vh"
     color="transparent"
     style="font-family: Poppins; line-height: 1.4"
   >
     <h1>
       I wasn't in the Mood While Designing This Component.<br />
-      Just Click Here 👋:
+      Just Click Here 👋
     </h1>
     <v-btn
       :class="['rounded d-flex justify-center white--text px-4 mt-6 font-weight-bold', !isMobile ? 'f-20' : 'f-14']"

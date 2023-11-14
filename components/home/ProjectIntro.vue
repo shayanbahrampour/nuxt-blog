@@ -1,8 +1,9 @@
 <template>
   <v-sheet
+    id="intro"
     height="100vh"
     :class="[
-      'position-relative mx-auto home-slider overflow-hidden d-flex justify-center align-center',
+      'position-relative mx-auto home-slider overflow-hidden d-flex justify-center align-center container',
       isMobile && 'px-8'
     ]"
     color="transparent"
@@ -33,7 +34,7 @@
       >
         24 y/o Front-End Developer From Esfahan, Iran<br />
         Let's Take a Look at Some of the Projects<br /><br />
-        <span class="f-20">Scroll Down 👇</span>
+        <span class="f-20" @click="$vuetify.goTo('#maanproject')" style="cursor: pointer">Scroll Down 👇</span>
       </h1>
     </div>
   </v-sheet>
@@ -43,6 +44,7 @@
 import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import Lenis from '@studio-freight/lenis';
+import { Draggable } from 'gsap/Draggable';
 export default {
   data() {
     return {
@@ -59,9 +61,14 @@ export default {
     window.removeEventListener('resize', this.calculateHeight);
   },
   async mounted() {
-    gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollTrigger, Draggable);
     const lenis = new Lenis({
       lerp: 0.1
+    });
+
+    Draggable.create('.avatar', {
+      bounds: '.container',
+      inertia: true
     });
 
     lenis.on('scroll', ScrollTrigger.update);
