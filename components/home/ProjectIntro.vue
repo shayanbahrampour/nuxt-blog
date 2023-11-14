@@ -7,7 +7,22 @@
     ]"
     color="transparent"
     style="position: fixed"
-    ><div class="box">
+  >
+    <v-img
+      src="/images/timeline/shaw.png"
+      class="avatar"
+      max-width="180"
+      height="160"
+      style="position: absolute; left: 5%; top: 20%"
+    />
+    <v-img
+      src="/images/timeline/crown.png"
+      class="avatar"
+      max-width="140"
+      height="120"
+      style="position: absolute; left: 5%; top: 11%"
+    />
+    <div class="box">
       <h1
         :class="[
           'white--text text--darken-2 font-weight-regular',
@@ -18,7 +33,7 @@
       >
         24 y/o Front-End Developer From Esfahan, Iran<br />
         Let's Take a Look at Some of the Projects<br /><br />
-        Scroll Down 👇
+        <span class="f-20">Scroll Down 👇</span>
       </h1>
     </div>
   </v-sheet>
@@ -58,6 +73,15 @@ export default {
 
     gsap.defaults({ ease: 'power3' });
     gsap.set('.box', { y: -1000 });
+    gsap.to('.avatar', {
+      rotation: 360,
+      x: '60vw',
+      ScrollTrigger: '.box',
+      xPercent: -100,
+      duration: 100,
+      repeat: 10,
+      yoyo: true
+    });
 
     ScrollTrigger.batch('.box', {
       onEnter: (batch) => gsap.to(batch, { opacity: 1, y: 0, stagger: { each: 0.15, grid: [1, 3] }, overwrite: true }),
