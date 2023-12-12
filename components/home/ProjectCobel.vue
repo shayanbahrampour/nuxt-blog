@@ -1,10 +1,7 @@
 <template>
   <v-sheet
-    height="100vh"
-    :class="[
-      'position-relative mx-auto home-slider overflow-hidden d-flex justify-center align-center',
-      isMobile && 'px-8'
-    ]"
+    min-height="100vh"
+    :class="['position-relative mx-auto home-slider d-flex justify-center align-center', isMobile && 'px-8']"
     color="transparent"
     style="position: fixed"
     ><div class="cobel d-flex flex-column align-center" style="font-family: Poppins">
