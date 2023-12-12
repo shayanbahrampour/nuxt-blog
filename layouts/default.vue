@@ -2,7 +2,7 @@
   <v-app>
     <v-main style="background: linear-gradient(to top, #232d3f, black) !important">
       <v-fade-transition hide-on-leave leave-absolute>
-        <Nuxt />
+        <Nuxt style="width: 100vw" />
       </v-fade-transition>
     </v-main>
   </v-app>
