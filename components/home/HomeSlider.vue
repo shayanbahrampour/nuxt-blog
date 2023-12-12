@@ -41,7 +41,7 @@
     <div
       v-if="flag.loading"
       class="d-flex align-center justify-center"
-      style="position: fixed; top: 0; bottom: 0; left: 0; right: 0; z-index: 1000; background-color: #131226"
+      style="position: fixed; top: 0; bottom: 0; left: 0; right: 0; z-index: 1000; background-color: black"
     >
       <div class="load-5">
         <div class="ring-2">
@@ -111,13 +111,13 @@ export default {
     gsap.ticker.lagSmoothing(0);
 
     gsap.defaults({ ease: 'power3' });
-    gsap.set('.title-home', { x: 0 });
+    gsap.set('.title-home', { opacity: 0 });
 
     ScrollTrigger.batch('.title-home', {
-      onEnter: (batch) => gsap.to(batch, { opacity: 1, x: 0, stagger: { each: 0.15, grid: [1, 3] }, overwrite: true }),
-      onLeave: (batch) => gsap.to(batch, { opacity: 0, x: 1000, overwrite: true }),
-      onEnterBack: (batch) => gsap.to(batch, { opacity: 1, x: 0, stagger: 0.15, overwrite: true }),
-      onLeaveBack: (batch) => gsap.set(batch, { opacity: 0, x: 1000, overwrite: true })
+      onEnter: (batch) => gsap.to(batch, { opacity: 1, stagger: { each: 0.15, grid: [1, 3] }, overwrite: true }),
+      onLeave: (batch) => gsap.to(batch, { opacity: 0, overwrite: true }),
+      onEnterBack: (batch) => gsap.to(batch, { opacity: 1, stagger: 0.15, overwrite: true }),
+      onLeaveBack: (batch) => gsap.set(batch, { opacity: 0, overwrite: true })
     });
     ScrollTrigger.addEventListener('refreshInit', () => gsap.set('.title-home', { y: 0 }));
   },
