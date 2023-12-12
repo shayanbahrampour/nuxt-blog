@@ -4,36 +4,29 @@
     class="position-relative mx-auto home-slider overflow-hidden d-flex d-flex align-center"
     color="transparent"
   >
-    <v-sheet
-      :class="['position-relative z-1 mx-auto d-flex align-center', isMobile ? 'px-8' : 'px-16']"
-      color="transparent"
-      height="100%"
-      min-height="500"
+    <div
+      v-if="!flag.loading"
+      class="d-flex flex-column align-start justify-end"
+      style="position: absolute; left: 10%; z-index: 2; width: 40%"
     >
-      <div class="d-flex flex-column align-center justify-center" :style="!isMobile && `height: 90%`">
-        <h1
-          :class="[
-            'white--text text--darken-2 font-weight-regular title-home',
-            isMobile ? 'f-40' : 'f-45',
-            isRTL && isMobile && 'text-center'
-          ]"
-          style="font-family: Poppins; line-height: 1.4; font-weight: 600"
-        >
-          Shaw Bahrampour:<br />
-          Riding the Data Wave with Retro Vibes🌴 - A Front-End Developer's Paradise
-        </h1>
-        <h1
-          :class="[
-            'white--text text--darken-2 mt-10 font-weight-regular title-home w-full',
-            isMobile ? 'f-20' : 'f-24 text-start',
-            isRTL && isMobile && 'text-center'
-          ]"
-          style="font-family: Poppins; line-height: 1.4; font-weight: 600; cursor: pointer"
-          @click="$vuetify.goTo('#intro')"
-        >
-          Scroll Down 👇
-        </h1>
-        <!-- <div v-if="!flag.loading && item" class="w-full mt-16 d-flex flex-column align-start">
+      <h1
+        :class="['white--text text--darken-2 font-weight-regular title-home text-start', isMobile ? 'f-40' : 'f-45']"
+        style="font-family: Poppins; line-height: 1.4; font-weight: 600"
+      >
+        Shaw Bahrampour:<br />
+        Riding the Data Wave with Retro Vibes🌴 - A Front-End Developer's Paradise
+      </h1>
+      <h1
+        :class="[
+          'white--text text--darken-2 mt-10 font-weight-regular title-home w-full text-start',
+          isMobile ? 'f-20' : 'f-24'
+        ]"
+        style="font-family: Poppins; line-height: 1.4; font-weight: 600; cursor: pointer"
+        @click="$vuetify.goTo('#intro')"
+      >
+        Scroll Down 👇
+      </h1>
+      <!-- <div v-if="!flag.loading && item" class="w-full mt-16 d-flex flex-column align-start">
           <span class="white--text f-20">Lates Blog Post:</span>
           <v-btn
             text
@@ -44,24 +37,35 @@
             >{{ item.title }}</v-btn
           >
         </div> -->
-      </div>
-    </v-sheet>
-    <v-sheet
-      v-if="!isMobile"
-      class="mr-16 rounded overflow-hidden"
-      height="90%"
-      min-width="35%"
-      color="transparent"
-      style="border: solid 2px grey !important"
+    </div>
+    <div
+      v-if="flag.loading"
+      class="d-flex align-center justify-center"
+      style="position: fixed; top: 0; bottom: 0; left: 0; right: 0; z-index: 1000; background-color: #131226"
     >
-      <iframe
-        src="https://my.spline.design/darkspideycopy-064a63ac1ff82ba5aeebc45c26b69ec8/"
-        frameborder="0"
-        width="100%"
-        height="115%"
-        style="border-radius: 14px"
-      ></iframe>
-    </v-sheet>
+      <div class="load-5">
+        <div class="ring-2">
+          <div class="ball-holder">
+            <div class="ball"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <iframe
+      id="i_frame"
+      src="https://my.spline.design/galaxyrollercoaster-eae0adfdbd11eedbf53a8ee1409d1fb4/"
+      frameborder="0"
+      width="100%"
+      height="115%"
+      @load="flag.loading = false"
+      style="
+        border-radius: 14px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 90%);
+      "
+    ></iframe>
   </v-sheet>
 </template>
 
@@ -77,7 +81,7 @@ export default {
       blogGasp: null,
       screenHeight: 1080,
       flag: {
-        loading: false
+        loading: true
       }
     };
   },
@@ -123,15 +127,44 @@ export default {
     }
   },
   async fetch() {
-    this.flag.loading = true;
-    const { posts } = await this.$store.dispatch('news/getPosts');
-    this.item = posts[0];
-    this.flag.loading = false;
+    // this.flag.loading = true;
+    // const { posts } = await this.$store.dispatch('news/getPosts');
+    // this.item = posts[0];
+    // this.flag.loading = false;
   }
 };
 </script>
 
 <style lang="scss">
+.ring-2 {
+  position: relative;
+  width: 45px;
+  height: 45px;
+  margin: 0 auto;
+  border: 4px solid white;
+  border-radius: 100%;
+}
+
+.ball-holder {
+  position: absolute;
+  width: 12px;
+  height: 45px;
+  left: 17px;
+  top: 0px;
+}
+.load-5 .ball-holder {
+  animation: loadingE 1.3s linear infinite;
+}
+
+.ball {
+  position: absolute;
+  top: -11px;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  background: white;
+}
 .post-title:hover {
   color: grey !important;
   cursor: pointer;
@@ -140,6 +173,15 @@ export default {
   color: white;
   text-align: center;
   transform: translate(-50%, -50%);
+}
+
+@keyframes loadingE {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @media (max-width: 800px) {
