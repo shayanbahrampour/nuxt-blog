@@ -95,13 +95,13 @@ export default {
     gsap.ticker.lagSmoothing(0);
 
     gsap.defaults({ ease: 'power3' });
-    gsap.set('.maan', { x: 1000 });
+    gsap.set('.maan', { opacity: 0 });
 
     ScrollTrigger.batch('.maan', {
-      onEnter: (batch) => gsap.to(batch, { opacity: 1, x: 0, stagger: { each: 0.15, grid: [1, 3] }, overwrite: true }),
-      onLeave: (batch) => gsap.set(batch, { opacity: 0, x: 1000, overwrite: true }),
-      onEnterBack: (batch) => gsap.to(batch, { opacity: 1, x: 0, stagger: 0.15, overwrite: true }),
-      onLeaveBack: (batch) => gsap.set(batch, { opacity: 0, x: -1000, overwrite: true })
+      onEnter: (batch) => gsap.to(batch, { opacity: 1, stagger: { each: 0.15, grid: [1, 3] }, overwrite: true }),
+      onLeave: (batch) => gsap.set(batch, { opacity: 0, overwrite: true }),
+      onEnterBack: (batch) => gsap.to(batch, { opacity: 1, stagger: 0.15, overwrite: true }),
+      onLeaveBack: (batch) => gsap.set(batch, { opacity: 0, overwrite: true })
     });
     ScrollTrigger.addEventListener('refreshInit', () => gsap.set('.maan', { y: 0 }));
 
