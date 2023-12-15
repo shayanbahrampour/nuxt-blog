@@ -1,7 +1,7 @@
 import fa from './lang/fa';
 import en from './lang/en';
 
-const projectName = 'Cobel';
+const projectName = 'Shaw Bahrampour';
 const isProduction = process.env.NODE_ENV === 'production';
 
 export default {
@@ -24,7 +24,7 @@ export default {
 
       { name: 'twitter:title', content: '' },
       { name: 'twitter:image', content: '/images/icons/apple-touch-icon.png' },
-      { name: 'twitter:image:alt', content: 'Cobel' },
+      { name: 'twitter:image:alt', content: 'Shaw Bahrampour' },
       { name: 'twitter:description', content: '' },
 
       { hid: 'keyword', property: 'keyword', content: '' },
@@ -127,17 +127,7 @@ export default {
         }
       }
     ],
-    ['@nuxtjs/robots', { UserAgent: '*', Disallow: '/' }],
-    [
-      '@nuxtjs/google-gtag',
-      {
-        id: 'G-ESS8P8H60C',
-        config: {
-          anonymize_ip: true,
-          send_page_view: true
-        }
-      }
-    ]
+    ['@nuxtjs/robots', { UserAgent: '*', Disallow: '/' }]
   ],
 
   // Optional
