@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <!-- <div>
     <HomeSlider />
     <ProjectIntro />
     <ProjectMaan />
@@ -7,6 +7,14 @@
     <ProjectLyan />
     <ProjectCobel />
     <ContactMe />
+  </div> -->
+  <div class="w-full h-full pa-6" style="background-color: black; color: #4af626">
+    <p class="f-16" style="font-weight: 500 !important">
+      Always dreaming about stars. <br /><br />
+      Thinking about something like a black hole which exists somewhere out there drives me crazy.
+      <br /><br /><br /><br />
+      Shaw Bahrampour
+    </p>
   </div>
 </template>
 

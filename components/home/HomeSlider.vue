@@ -4,7 +4,7 @@
     class="position-relative mx-auto home-slider overflow-hidden d-flex d-flex align-center"
     color="transparent"
   >
-    <div
+    <!-- <div
       v-if="!flag.loading"
       class="d-flex flex-column align-start justify-end"
       style="position: absolute; left: 10%; z-index: 2; width: 40%"
@@ -26,7 +26,7 @@
       >
         Scroll Down 👇
       </h1>
-      <!-- <div v-if="!flag.loading && item" class="w-full mt-16 d-flex flex-column align-start">
+      <div v-if="!flag.loading && item" class="w-full mt-16 d-flex flex-column align-start">
           <span class="white--text f-20">Lates Blog Post:</span>
           <v-btn
             text
@@ -36,8 +36,8 @@
             :href="item.url"
             >{{ item.title }}</v-btn
           >
-        </div> -->
-    </div>
+        </div>
+    </div> -->
     <div
       v-if="flag.loading"
       class="d-flex align-center justify-center"
@@ -53,7 +53,9 @@
     </div>
     <iframe
       id="i_frame"
-      src="https://my.spline.design/galaxyrollercoaster-eae0adfdbd11eedbf53a8ee1409d1fb4/"
+      src="
+        https://my.spline.design/hellodistortingintro-300dc3fdfd79e0614012b990d8087f6e/
+      "
       frameborder="0"
       width="100%"
       height="115%"
