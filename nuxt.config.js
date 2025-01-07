@@ -116,6 +116,7 @@ export default {
           Roboto: true,
           Inter: [400, 700],
           'Pixelify+Sans': true,
+          'JetBrains+Mono': [300, 400, 500, 600, 900],
           Gabarito: true,
           'IBM+Plex+Mono': true,
           Poppins: [300, 600],

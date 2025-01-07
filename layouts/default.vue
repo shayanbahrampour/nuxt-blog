@@ -1,6 +1,13 @@
 <template>
-  <v-app>
+  <!-- <v-app>
     <v-main style="background: linear-gradient(to top, #232d3f, black) !important">
+      <v-fade-transition hide-on-leave leave-absolute>
+        <Nuxt />
+      </v-fade-transition>
+    </v-main>
+  </v-app> -->
+  <v-app>
+    <v-main style="font-family: JetBrains Mono !important">
       <v-fade-transition hide-on-leave leave-absolute>
         <Nuxt />
       </v-fade-transition>
