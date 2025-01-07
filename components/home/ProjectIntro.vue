@@ -43,7 +43,6 @@
 <script>
 import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
-import Lenis from '@studio-freight/lenis';
 import { Draggable } from 'gsap/Draggable';
 export default {
   data() {
@@ -62,20 +61,7 @@ export default {
   },
   async mounted() {
     gsap.registerPlugin(ScrollTrigger, Draggable);
-    const lenis = new Lenis({
-      lerp: 0.1
-    });
 
-    Draggable.create('.avatar', {
-      bounds: '.container',
-      inertia: true
-    });
-
-    lenis.on('scroll', ScrollTrigger.update);
-
-    gsap.ticker.add((time) => {
-      lenis.raf(time * 1000);
-    });
     gsap.ticker.lagSmoothing(0);
 
     gsap.defaults({ ease: 'power3' });
