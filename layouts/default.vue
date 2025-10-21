@@ -7,7 +7,7 @@
     </v-main>
   </v-app> -->
   <v-app>
-    <v-main style="font-family: JetBrains Mono !important">
+    <v-main style="font-family: JetBrains Mono !important; background-color: black">
       <v-fade-transition hide-on-leave leave-absolute>
         <Nuxt />
       </v-fade-transition>
