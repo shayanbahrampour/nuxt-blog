@@ -1,0 +1,28 @@
+$path: '~assets/fonts';
+
+@mixin font-face-creator($fontName-app, $path, $fontName-path, $weight) {
+  @font-face {
+    font-style: normal;
+    font-weight: $weight;
+    font-display: swap;
+    font-family: $fontName-app;
+    src: url('#{$path}/#{$fontName-path}.eot');
+    src: url('#{$path}/#{$fontName-path}.eot?#iefix') format('embedded-opentype'),
+      url('#{$path}/#{$fontName-path}.woff') format('woff'), url('#{$path}/#{$fontName-path}.ttf') format('truetype');
+  }
+}
+
+@include font-face-creator('bel', '#{$path}/bel', 'bel', normal);
+
+@include font-face-creator('proxima', '#{$path}/proxima', 'ProximaNova-Light', 300);
+@include font-face-creator('proxima', '#{$path}/proxima', 'ProximaNova-Semibold', 600);
+@include font-face-creator('proxima', '#{$path}/proxima', 'ProximaNova-Regular', normal);
+
+@include font-face-creator('ravi', '#{$path}/ravi', 'Ravi-Regular', normal);
+@include font-face-creator('ravi', '#{$path}/ravi', 'Ravi-Light', 300);
+@include font-face-creator('ravi', '#{$path}/ravi', 'Ravi-Bold', 600);
+
+@include font-face-creator('anjoman', '#{$path}/anjoman', 'AnjomanMax-Regular', normal);
+@include font-face-creator('anjoman', '#{$path}/anjoman', 'AnjomanMax-Light', 300);
+@include font-face-creator('anjoman', '#{$path}/anjoman', 'AnjomanMax-Bold', 600);
+

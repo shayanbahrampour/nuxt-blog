@@ -1,4 +1,4 @@
-# Cobel Web
+# Shaw's Blog
 
 ## Build Setup
 
@@ -17,6 +17,8 @@ $ yarn start
 $ yarn generate
 ```
 
-## Project Info
+## Project Docs
 
-- [API Document](#)
+- [i18n Documentation](https://kazupon.github.io/vue-i18n/)
+- [Api Documentation](https://api-cobel.applife.ir/api/document#/)
+- [Animation View](https://drive.google.com/file/d/17lYxsdqWqROmd8QpX-R9RLArJSu8UAza/view)

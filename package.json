@@ -1,0 +1,47 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@mdi/font": "^7.2.96",
+    "@nuxtjs/axios": "^5.13.6",
+    "@nuxtjs/dayjs": "^1.4.1",
+    "@nuxtjs/google-fonts": "^3.0.2",
+    "@nuxtjs/google-gtag": "^1.0.4",
+    "@nuxtjs/i18n": "^7.3.1",
+    "@nuxtjs/robots": "^2.5.0",
+    "@nuxtjs/toast": "^3.3.1",
+    "@nuxtjs/vuetify": "^1.12.3",
+    "core-js": "^3.30.2",
+    "dayjs": "^1.11.7",
+    "gsap": "^3.12.2",
+    "jalaliday": "^2.3.0",
+    "nuxt": "^2.16.3",
+    "nuxt-swiper": "^1.1.0",
+    "swiper": "6.6.2",
+    "vue-awesome-swiper": "^4.1.1",
+    "vue-fullscreen": "^2.6.2",
+    "vue-meta": "^2.4.0",
+    "vue-pdf": "^4.3.0",
+    "vue-video-player": "^5.0.2",
+    "vuetify": "^2.6.15"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.21.8",
+    "@nuxt/types": "^2.16.0",
+    "@nuxtjs/eslint-config": "^12.0.0",
+    "@nuxtjs/eslint-module": "^3.1.0",
+    "eslint": "^8.41.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-nuxt": "^4.0.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-vue": "^9.14.1",
+    "prettier": "^2.8.4"
+  }
+}
